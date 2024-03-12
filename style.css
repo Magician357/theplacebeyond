@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne+Mono&display=swap');
+
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+        url('Mona-Sans.woff2') format('woff2 supports variations'),
+        url('Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+:root {
+    --size: -100px;
+}
+
+* {
+    font-family: 'Mona Sans', monospace;
+}
+
+#header, #header2 {
+    white-space: nowrap;
+    overflow-x:hidden;
+}
+
+#title {
+    white-space: pre;
+    font-size: 50px;
+    animation: scroll 2s infinite linear;
+}
+
+#title-dontmove{
+    white-space: pre;
+    font-size: 50px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(var(--size));
+    }
+}
